@@ -5,8 +5,6 @@ VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{9A890527-E8F2-4B52-9714-9D29494B47FF}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "GenCodeLib", "src\GenCodeLib\GenCodeLib.fsproj", "{AB6B3E5D-4BDD-45A6-9E02-2F52DFA2E1A9}"
-EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "App", "src\App\App.fsproj", "{0BE39209-59FF-45F0-9CF6-06D37044A289}"
 EndProject
 Global
@@ -22,18 +20,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{AB6B3E5D-4BDD-45A6-9E02-2F52DFA2E1A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AB6B3E5D-4BDD-45A6-9E02-2F52DFA2E1A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AB6B3E5D-4BDD-45A6-9E02-2F52DFA2E1A9}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{AB6B3E5D-4BDD-45A6-9E02-2F52DFA2E1A9}.Debug|x64.Build.0 = Debug|Any CPU
-		{AB6B3E5D-4BDD-45A6-9E02-2F52DFA2E1A9}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{AB6B3E5D-4BDD-45A6-9E02-2F52DFA2E1A9}.Debug|x86.Build.0 = Debug|Any CPU
-		{AB6B3E5D-4BDD-45A6-9E02-2F52DFA2E1A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AB6B3E5D-4BDD-45A6-9E02-2F52DFA2E1A9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AB6B3E5D-4BDD-45A6-9E02-2F52DFA2E1A9}.Release|x64.ActiveCfg = Release|Any CPU
-		{AB6B3E5D-4BDD-45A6-9E02-2F52DFA2E1A9}.Release|x64.Build.0 = Release|Any CPU
-		{AB6B3E5D-4BDD-45A6-9E02-2F52DFA2E1A9}.Release|x86.ActiveCfg = Release|Any CPU
-		{AB6B3E5D-4BDD-45A6-9E02-2F52DFA2E1A9}.Release|x86.Build.0 = Release|Any CPU
 		{0BE39209-59FF-45F0-9CF6-06D37044A289}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0BE39209-59FF-45F0-9CF6-06D37044A289}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0BE39209-59FF-45F0-9CF6-06D37044A289}.Debug|x64.ActiveCfg = Debug|Any CPU
@@ -48,7 +34,6 @@ Global
 		{0BE39209-59FF-45F0-9CF6-06D37044A289}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{AB6B3E5D-4BDD-45A6-9E02-2F52DFA2E1A9} = {9A890527-E8F2-4B52-9714-9D29494B47FF}
 		{0BE39209-59FF-45F0-9CF6-06D37044A289} = {9A890527-E8F2-4B52-9714-9D29494B47FF}
 	EndGlobalSection
 EndGlobal
