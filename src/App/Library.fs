@@ -7,6 +7,23 @@ module Encoder =
         | UnexpectedEnd
         | InvalidCharacter
         
+    let rec skip_comment () : (Char) -> bool =
+        let mutable skip = false
+        fun (c:Char) ->
+            if c = '>' then
+                skip <- true
+                false
+            elif skip && c='\n' then
+                skip <- false
+                false
+            elif skip then
+                false
+            else
+                true
+    
+    let tokens e =
+           Seq.filter (skip_comment ()) e |> Seq.filter (fun c -> not(Char.IsWhiteSpace(c))) 
+           
     let rec next_token (str: string) (at:int) : (char * int) option =
        
         if str.Length <= at then
@@ -24,15 +41,26 @@ module Encoder =
             else     
                 Some (_char, (at + 1))          
     
-    //let (--.>) () option  
-    
-    //let next_codon str at : Result<(Codon * int),Errors> = 
-        
-      
+             
     module Test =     
         open NUnit.Framework
         open FsUnit
 
+        [<Test>]
+        let ``retrieve tokens from sequence, ignoring whitespace and comments`` () = 
+            let t = tokens "c G\na\n>BLAB ALA\nU"
+                        
+            let e = t.GetEnumerator()
+            e.MoveNext() |> ignore            
+            e.Current |> should equal 'c'
+            e.MoveNext() |> ignore            
+            e.Current |> should equal 'G'
+            e.MoveNext() |> ignore            
+            e.Current |> should equal 'a'
+            e.MoveNext() |> ignore                                    
+            e.Current |> should equal 'U'
+            e.MoveNext() |> should equal false
+        
         [<Test>]
         let ``retrieve tokens from string, ignoring whitespace and comments`` () = 
             
